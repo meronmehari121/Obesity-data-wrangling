@@ -8,7 +8,7 @@ pacman::p_load(rio,tidyverse)
 
 # Import original data 
 
-path <- 'C:/Users/mbk/OneDrive - Lane Clark & Peacock LLP/Novo Obesity R scrpt workflow automation/NOVO_Obesity_High_BMI_ObesityI_ComorbidityPrevalence_ByYear.csv'
+path <- '....file.csv'
 dat0 <- rio::import(file = path)  
 
 

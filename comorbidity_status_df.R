@@ -1,5 +1,5 @@
 # Data cleaning of WSIC data
-# Replicate data frame as : "NOVO_ObesityI_Comorbidity_ByYear_age_standardised_Age_at_Index_BMI_Category_for_WS4"
+# Replicate data frame as : "Comorbidity_ByYear_age_standardised_Age_at_Index_BMI_Category_for_WS4"
 # i.e. a df with 35 rows representing comorbidities and 54 columns representing percentage of people in a given age band at index BMI
 
 # libraries used

@@ -28,7 +28,7 @@ dat2 <-  dat1 %>% select("Year", "Strata_Category", "Strata", starts_with("Age s
 
 dat3 <- dat2 %>%
   rename_with(function(x){gsub("Age standardised","",x)}) %>% 
-  unite(year_strata, Year, Strata, sep = "_" ,remove = F) 
+  unite(year_strata, Year, Strata, sep = "_" ,remove = FALSE) 
 
 
 
@@ -41,7 +41,7 @@ dat3 <- dat2 %>%
 # create year by co morbidity column for column values
 
 mcomorbidity_yes <-  dat3 %>%  filter(Strata == "Yes") %>% 
-  unite(year_comorbidity,Year, Strata_Category, sep = "_", remove = F) %>% 
+  unite(year_comorbidity,Year, Strata_Category, sep = "_", remove = FALSE) %>% 
   select(everything(), -year_strata, -Year, -Strata, -Strata_Category) 
   
 
@@ -63,7 +63,7 @@ mcomorbidity_yes <- mcomorbidity_yes %>%
 # create year by co morbidity column for column values
 
 mcomorbidity_no <-  dat3 %>%  filter(Strata == "No") %>% 
-  unite(year_comorbidity,Year, Strata_Category, sep = "_", remove = F) %>% 
+  unite(year_comorbidity,Year, Strata_Category, sep = "_", remove = FALSE) %>% 
   select(everything(), -year_strata, -Year, -Strata, -Strata_Category) 
 
 

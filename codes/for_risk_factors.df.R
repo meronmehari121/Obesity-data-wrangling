@@ -44,7 +44,7 @@ dat3 <-  dat2   %>%
 
 
 
-write.csv(dat3, file = "dat3.csv")
+write.csv(dat3, file = "dat3.csv", rownames = F)
 
 
 

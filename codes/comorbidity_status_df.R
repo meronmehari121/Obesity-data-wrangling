@@ -31,11 +31,7 @@ dat3 <- dat2 %>%
   unite(year_strata, Year, Strata, sep = "_" ,remove = FALSE) 
 
 
-
-
-
 ############## Comorbidity df ###############
-
 
 # To create comorbitity status data frame, filter  people with comorbidity & 
 # create year by co morbidity column for column values
@@ -52,12 +48,7 @@ mcomorbidity_yes <- mcomorbidity_yes %>%
   spread(key =  "year_comorbidity", value =  value) %>% slice(-36)
  
 
-
-
-
-
 ############## No Comorbidity df ###############
-
 
 # To create comorbitity status data frame, filter  people with comorbidity & 
 # create year by co morbidity column for column values
@@ -73,5 +64,3 @@ mcomorbidity_no <- mcomorbidity_no %>%
   gather(key= disease_name, value =  value, - "year_comorbidity") %>% 
   spread(key =  "year_comorbidity", value =  value) %>% slice(-36)
  
-
-

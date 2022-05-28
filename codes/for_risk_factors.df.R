@@ -17,7 +17,6 @@ dat0 <- rio::import(file = path)
 dat1 <- dat0 %>% mutate_all(~ str_replace(., "< 5", "0")) %>% mutate_all(~ str_replace(., "< 25", "0"))
          
 
-
 # Then, select correct variables, clean variable names, and create new column with "year" and "strata" variables  
 
 dat2 <- dat1 %>% select("Year", "Strata_Category", "Strata", starts_with("Age standardised"), -ends_with("CI")) %>% 
@@ -30,7 +29,6 @@ dat2 <- dat1 %>% select("Year", "Strata_Category", "Strata", starts_with("Age st
 
 sapply(dat2, class)         
  
-
 # transposing column names to row names to get desired df format
 
 dat3 <-  dat2   %>% 
@@ -40,18 +38,4 @@ dat3 <-  dat2   %>%
   mutate(variable = str_replace(variable, "Age standardised ", "")) 
 
 
-
-
-
-
 write.csv(dat3, file = "dat3.csv", rownames = F)
-
-
-
-
-
-
-
-
-
-                 

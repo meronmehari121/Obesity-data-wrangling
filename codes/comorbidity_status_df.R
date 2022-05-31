@@ -30,7 +30,6 @@ dat3 <- dat2 %>%
   rename_with(function(x){gsub("Age standardised","",x)}) %>% 
   unite(year_strata, Year, Strata, sep = "_" ,remove = FALSE) 
 
-
 ############## Comorbidity df ###############
 
 # To create comorbitity status data frame, filter  people with comorbidity & 
@@ -56,7 +55,6 @@ mcomorbidity_yes <- mcomorbidity_yes %>%
 mcomorbidity_no <-  dat3 %>%  filter(Strata == "No") %>% 
   unite(year_comorbidity,Year, Strata_Category, sep = "_", remove = FALSE) %>% 
   select(everything(), -year_strata, -Year, -Strata, -Strata_Category) 
-
 
 # Transpose df to get year_comorbidity on column & comorbidity in rows 
 
